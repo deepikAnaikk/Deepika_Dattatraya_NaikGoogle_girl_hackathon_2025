@@ -75,3 +75,38 @@ This project implements a machine learning-based tool to predict the combination
 * TensorFlow or PyTorch (if using neural networks)
 * networkx (if using graph features)
 * any other dependencies listed in requirements.txt
+
+Key Code Implementation Considerations:
+
+Data Loading and Preprocessing (data_loader.py):
+Use libraries like pandas to load and manipulate CSV/JSON datasets.
+Implement functions to parse synthesis reports and extract CLD values.
+Handle missing or inconsistent data.
+Feature Extraction (feature_extractor.py):
+Implement functions to calculate fan-in, fan-out, and other relevant features.
+Use libraries like networkx for graph-based feature extraction (if using GNNs).
+Implement one hot encoding.
+Model Implementation (model.py):
+Use libraries like scikit-learn for Random Forest or Gradient Boosting.
+Use TensorFlow or PyTorch for neural network models (GNNs, MLPs).
+Implement the chosen model architecture.
+Training and Evaluation (trainer.py):
+Implement training loops using scikit-learn or TensorFlow/PyTorch.
+Use scikit-learn metrics for evaluation.
+Implement run-time measurement using time module.
+Graph Creation:
+Use Antlr4, or other parsing tools, to create the graph from the RTL.
+Error Handling:
+Implement robust error handling throughout the code.
+V. Evaluation Criteria Alignment:
+
+Accuracy of Logic-Depth Prediction:
+Use MSE, MAE, or R-squared to quantify the difference between predicted and actual CLD values.
+Present results in tables and graphs.
+Prediction Run-Time:
+Measure the time taken for feature extraction and model prediction.
+Compare the run-time with the synthesis run-time.
+Present run-time results in tables and graphs.
+Feature Engineering:
+Provide a detailed explanation of the chosen features and their impact on prediction quality.
+Perform ablation studies to assess the importance of individual features.
